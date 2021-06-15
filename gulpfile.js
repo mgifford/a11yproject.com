@@ -64,7 +64,10 @@ var jshint = require('gulp-jshint');
 var terser = require('gulp-terser');
 
 // Styles
+var Fiber = require('fibers');
 var sass = require('gulp-sass');
+sass.compiler = require('sass');
+
 var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-cssnano');
 var gulpStylelint = require('gulp-stylelint');
@@ -129,6 +132,7 @@ var buildStyles = function (done) {
 	// Run tasks on all Sass files
 	return src(paths.styles.input)
 		.pipe(sass({
+			fiber: Fiber,
 			outputStyle: 'expanded',
 			sourceComments: true
 		}))
