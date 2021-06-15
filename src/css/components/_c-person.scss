@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $_person-distance: (
 	small: 6rem,
 	large: 14rem
@@ -36,7 +38,7 @@ $_person-photo: (
 	display: inline-block;
 	margin-top: -2.75rem;
 	position: absolute;
-		right: calc(50% - #{map-get($_person-photo, tiny) / 2});
+		right: calc(50% - #{math.div(map-get($_person-photo, tiny), 2)});
 
 	// Breakpoints
 	@include mappy-bp(wrist-large) {

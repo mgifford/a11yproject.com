@@ -1,4 +1,6 @@
 // Namespace
+@use "sass:math";
+
 .c-content {
 	blockquote,
 	figcaption,
@@ -49,7 +51,7 @@
 
 		footer {
 			font-size: 90%;
-			margin-top: $_c-post-vertical-spacing / 2;
+			margin-top: math.div($_c-post-vertical-spacing, 2);
 
 			cite {
 				font-style: normal;
