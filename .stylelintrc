@@ -13,7 +13,7 @@
 		"selector-type-no-unknown": true,
 		"media-feature-name-no-unknown": true,
 		"at-rule-no-unknown": [true, {
-			"ignoreAtRules": ["at-root", "debug", "each", "else", "error", "extend", "for", "function", "import", "if", "include", "media", "mixin", "return", "warn", "while"]
+			"ignoreAtRules": ["at-root", "debug", "each", "else", "error", "extend", "for", "function", "import", "if", "include", "media", "mixin", "return", "warn", "while", "use"]
 		}],
 		"comment-no-empty": true,
 		"no-duplicate-selectors": true,
